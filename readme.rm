@@ -1,2 +1,19 @@
 Creando un test
 Usando Librerías
+
+CREAR LIB
+    g++ -c test.cpp -o test.o
+    ar rcs test.lib test.o
+COMPILAR PROGRAMA CON LIB
+    g++ main.cpp -L. -l:test.lib -o test.exe
+
+PARA DLL EN CADA FUNCION
+    extern "C" __declspec(dllexport) void miFuncion(){}
+CREAR DLL
+    g++ -shared -o test.dll test.cpp
+AÑADIR EN MAIN PARA USAR DLL
+    #include <windows.h>
+    typedef void (*preguntaFunc)(int x);
+    HMODULE hModule = LoadLibraryA("test.dll");
+    preguntaFunc pregunta = (preguntaFunc)GetProcAddress(hModule, "pregunta");
+COMPILAR PROGRAMA CON DLL
