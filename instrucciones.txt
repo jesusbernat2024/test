@@ -1,0 +1,13 @@
+programa Test de 2 preguntas
+
+intentar main limpio
+
+1 fase separar todo en funciones
+
+2 fase funciones en librerías
+
+
+crear librerías de los 3 tipos
+ - cpp + h
+ - lib + h
+ - dll
