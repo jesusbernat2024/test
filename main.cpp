@@ -10,9 +10,9 @@ int main() {
   HMODULE hModule = LoadLibraryA("test.dll");
   rpFunc rellenaPreguntas = (rpFunc)GetProcAddress(hModule, "rellenaPregutas");
   preguntaFunc pregunta = (preguntaFunc)GetProcAddress(hModule, "pregunta");
-  preguntaFunc getEnunciado = (preguntaFunc)GetProcAddress(hModule, "getEnunciado");
-  preguntaFunc getRespuestas = (preguntaFunc)GetProcAddress(hModule, "getRespuestas");
-  checkFunc checkRespuesta = (checkFunc)GetProcAddress(hModule, "checkRespuesta");
+  //preguntaFunc getEnunciado = (preguntaFunc)GetProcAddress(hModule, "getEnunciado");
+  //preguntaFunc getRespuestas = (preguntaFunc)GetProcAddress(hModule, "getRespuestas");
+  //checkFunc checkRespuesta = (checkFunc)GetProcAddress(hModule, "checkRespuesta");
 
   rellenaPreguntas();
 
