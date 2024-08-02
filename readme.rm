@@ -16,4 +16,3 @@ AÑADIR EN MAIN PARA USAR DLL
     typedef void (*preguntaFunc)(int x);
     HMODULE hModule = LoadLibraryA("test.dll");
     preguntaFunc pregunta = (preguntaFunc)GetProcAddress(hModule, "pregunta");
-COMPILAR PROGRAMA CON DLL
